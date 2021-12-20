@@ -75,3 +75,52 @@ const OP = user
   });
 
 console.log(OP);
+
+//==============================================================
+// revising MRF
+
+console.log("Revise of Map");
+
+const a = [1, 2, 3];
+
+function c(x) {
+  return x * 2;
+}
+const b = a.map(c); // we should pass the name function or even whole function because Map Filter aanad reduce are high order function
+
+console.log(b);
+
+//=======================================================================
+console.log("Revise of filter");
+const a1 = [1, 2, 3];
+
+function c(x) {
+  return x > 2;
+}
+
+const b1 = a1.filter(c);
+console.log(b1);
+//==========================================================
+console.log("Doing filter by arrow function");
+const a2 = [1, 2, 3];
+const b2 = a2.filter((x) => x > 2);
+console.log(b2);
+//============================================
+console.log(
+  "Bow using both MAP and filter.MAP for generation another array and filter for filtering"
+);
+const u = [
+  { firstName: "Sagar", lastName: "Kunwar", age: 22 },
+  { firstName: "Durgesh", lastName: "Thapa", age: 23 },
+  { firstName: "Aayush", lastName: "Devkota", age: 26 },
+  { firstName: "Ram", lastName: "Balami", age: 34 },
+  { firstName: "Hari", lastName: "Rai", age: 45 },
+];
+
+// Now we are using both filter and map at the same  time
+// we are using map in filtered data
+const r1 = u
+  .filter((x) => x.age > 25)
+  .map((x) => ["Hey my name is " + x.firstName + " " + x.lastName]);
+
+console.log(r1);
