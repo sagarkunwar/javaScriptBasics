@@ -18,10 +18,7 @@
 // console.log([b1]);
 // console.log([...rest]);
 
-const a = {
-  c: 3,
-  d: 5,
-};
+const a = { c: 3, d: 5 };
 
 function b(a) {
   const { c: e } = a;
@@ -47,3 +44,28 @@ function tellMeTomorrowsDay(days) {
 }
 
 const hey = console.log(tellMeTomorrowsDay(days));
+
+//===============================================================
+// revising desturctingAssignment
+
+const array = {
+  arr1: 5,
+  arr2: 7,
+};
+
+function dA(array) {
+  const { arr1: five } = array;
+  return five;
+}
+
+const resutl = console.log(dA(array));
+
+//======================================
+//with rest
+
+const a1 = [(ram = 1), (rum = 2), (shyam = 3)];
+// now using ...rest from ES6
+
+const [as, ...rest] = a1;
+console.log(as);
+console.log(...rest);
